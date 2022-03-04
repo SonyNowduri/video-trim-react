@@ -1,0 +1,74 @@
+.video_footer{
+    position: relative;
+    margin-left: 20px;
+    bottom: 40px;
+    color: blue;
+ }
+
+.video_footer_text {
+    position: absolute;
+    bottom: 0;
+    color: white;
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.video_footer_text  > h3{
+margin-left: 10px;
+padding-bottom: 20px;
+}
+.videofooter__ticker{
+    display: flex;
+    flex-direction: row;
+}
+
+.video_footer_text  > h3 > button{
+    color: white;
+    text-transform: inherit;
+    font-weight: 900;
+}
+
+.videofooter__ticker >   .ticker{
+height: fit-content;
+margin-left: 50px;
+margin-top: 10px;
+width: 20%;
+}
+
+.videofooter__ticker  .ticker h1{
+    font-size: 14px;
+    color: white;
+}
+
+
+.videofooter__actions {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    width: 95%;
+    color: white;
+    justify-content: space-between;
+}
+
+.videofooter_actionleft >  .MuiSvgIcon-root {
+    padding: 0 10px;  
+}
+
+.videofooter_actionRight  {
+    display: flex;
+}
+.videofooter_stat {
+    display: flex;
+    align-items: center;
+    margin-right: 10px; 
+}
+
+.videofooter_stat > p{
+    margin-left: 3px;
+}
+.videofooter_icon{
+    position: absolute;
+    left: 5px;
+
+    color: white;
+}
