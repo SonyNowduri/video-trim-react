@@ -1,41 +1,25 @@
 export const convertBase64 = (file) => {
+  return new Promise((resolve, reject) => {
+    const fileReader = new FileReader();
 
-    return new Promise((resolve, reject) => {
+    if (file) {
+      fileReader.readAsDataURL(file);
+    }
 
-        const fileReader = new FileReader()
+    fileReader.onload = () => {
+      const base64Res = fileReader.result;
 
-        if (file) {
+      var media = new Audio(fileReader.result);
 
-            fileReader.readAsDataURL(file)
+      media.onloadedmetadata = () => {
+        console.log(media.duration, "mediaduration");
+      };
 
-        }
+      resolve(base64Res);
+    };
 
-
-
-        fileReader.onload = () => {
-
-            const base64Res = fileReader.result
-
-            var media = new Audio(fileReader.result);
-
-            media.onloadedmetadata = () => {
-
-                console.log(media.duration, "mediaduration")
-
-            }
-
-            resolve(base64Res)
-
-        }
-
-
-
-        fileReader.onerror = (error) => {
-
-            reject(error)
-
-        }
-
-    })
-
-}
+    fileReader.onerror = (error) => {
+      reject(error);
+    };
+  });
+};
